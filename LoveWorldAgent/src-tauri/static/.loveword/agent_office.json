@@ -1,0 +1,10 @@
+{
+  "backup": {
+    "keep": 5
+  },
+  "auto_screenshot": {
+    "word": true,
+    "ppt": true,
+    "excel": true
+  }
+}

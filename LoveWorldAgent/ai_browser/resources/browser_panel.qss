@@ -1,0 +1,33 @@
+/* Qt 内置浏览器窗口级浅色样式（Bcb 控件自带样式保留，此处仅做容器级微调） */
+QMainWindow {
+    background: #F5F5F5;
+}
+QWidget#centralWidget {
+    background: #F5F5F5;
+}
+QTabWidget::pane {
+    border: none;
+    top: -1px;
+}
+QTabBar::tab {
+    min-width: 80px;
+    padding: 4px 10px;
+    border: 1px solid #E0E0E0;
+    border-bottom: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background: #FFFFFF;
+    color: #212121;
+}
+QTabBar::tab:selected {
+    background: #FFFFFF;
+    border-bottom: 2px solid #4CAF50;
+    color: #212121;
+}
+QTabBar::tab:!selected {
+    background: #F0F0F0;
+    color: #606266;
+}
+QTabBar::close-button {
+    subcontrol-position: right;
+}

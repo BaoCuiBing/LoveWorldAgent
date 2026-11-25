@@ -1,0 +1,179 @@
+{
+  "mode": "auto",
+  "groups": {
+    "mcp": {
+      "label": "MCP工具",
+      "enabled": true,
+      "commands": {
+        "Chrome DevTools MCP": true,
+        "GitHub": true
+      }
+    },
+    "powershell": {
+      "label": "PowerShell",
+      "enabled": true,
+      "commands": {
+        "format C:": false,
+        "diskpart": false,
+        "del /f /s /q": false,
+        "rm -rf *": false,
+        "git push --force": false,
+        "IEX DownloadString": false,
+        "Add-MpPreference -ExclusionPath": false,
+        "taskkill": false,
+        "reg delete": false,
+        "Invoke-Expression DownloadString": false,
+        "Remove-Item -Recurse -Force": false,
+        "Set-ExecutionPolicy Bypass": false,
+        "Start-Process Hidden": false,
+        "vssadmin delete shadows": false,
+        "wbadmin delete catalog": false,
+        "bcdedit /delete": false,
+        "net user /add": false,
+        "cipher /w": false,
+        "takeown /f": false
+      }
+    },
+    "browser": {
+      "label": "内置浏览器",
+      "enabled": true,
+      "commands": {
+        "browser_open": true,
+        "browser_navigate": true,
+        "browser_navigate_back": true,
+        "browser_tabs": true,
+        "browser_snapshot": true,
+        "browser_read_text": true,
+        "browser_take_screenshot": true,
+        "browser_click": true,
+        "browser_hover": true,
+        "browser_type": true,
+        "browser_select_option": true,
+        "browser_press_key": true,
+        "browser_get_attribute": true,
+        "browser_scroll": true,
+        "browser_wait_for": true,
+        "browser_waiting_for_user_interaction": true,
+        "browser_evaluate": true,
+        "browser_handle_dialog": true,
+        "browser_console_messages": true,
+        "browser_network_requests": true,
+        "browser_state": true
+      }
+    },
+    "computer": {
+      "label": "电脑控制",
+      "enabled": true,
+      "commands": {
+        "computer_click": true,
+        "computer_double_click": true,
+        "computer_right_click": true,
+        "computer_drag": true,
+        "computer_type_text": true,
+        "computer_press_key": true,
+        "computer_hotkey": true,
+        "computer_scroll": true,
+        "computer_set_value": true,
+        "computer_move_cursor": true,
+        "computer_list_apps": true,
+        "computer_list_windows": true,
+        "computer_launch_app": true,
+        "computer_kill_app": true,
+        "computer_bring_to_front": true,
+        "computer_set_window_frame": true,
+        "computer_invoke_menu": true,
+        "computer_get_window_state": true,
+        "computer_get_desktop_state": true,
+        "computer_debug_window_info": true,
+        "computer_get_accessibility_tree": true,
+        "computer_get_screen_size": true,
+        "computer_get_cursor_position": true
+      }
+    },
+    "word": {
+      "label": "Word操作",
+      "enabled": true,
+      "commands": {
+        "word_document": true,
+        "word_read": true,
+        "word_write": true,
+        "word_table": true,
+        "word_format": true,
+        "word_structure": true,
+        "word_find": true,
+        "word_edit": true,
+        "word_media": true,
+        "word_variable": true,
+        "word_batch": true,
+        "word_where_am_i": true
+      }
+    },
+    "ppt": {
+      "label": "PPT操作",
+      "enabled": true,
+      "commands": {
+        "ppt_presentation": true,
+        "ppt_read": true,
+        "ppt_slide": true,
+        "ppt_write": true,
+        "ppt_shape": true,
+        "ppt_table": true,
+        "ppt_format": true,
+        "ppt_chart": true,
+        "ppt_media": true,
+        "ppt_where_am_i": true
+      }
+    },
+    "excel": {
+      "label": "Excel操作",
+      "enabled": true,
+      "commands": {
+        "excel_workbook": true,
+        "excel_read": true,
+        "excel_write": true,
+        "excel_sheet": true,
+        "excel_format": true,
+        "excel_formula": true,
+        "excel_table": true,
+        "excel_chart": true,
+        "excel_sort_filter": true,
+        "excel_where_am_i": true
+      }
+    },
+    "mobile": {
+      "label": "移动端",
+      "enabled": true,
+      "commands": {
+        "mobile_list_available_devices": true,
+        "mobile_list_apps": true,
+        "mobile_get_foreground_app": true,
+        "mobile_launch_app": true,
+        "mobile_terminate_app": true,
+        "mobile_install_app": true,
+        "mobile_uninstall_app": true,
+        "mobile_get_screen_size": true,
+        "mobile_click_on_screen_at_coordinates": true,
+        "mobile_double_tap_on_screen": true,
+        "mobile_long_press_on_screen_at_coordinates": true,
+        "mobile_list_elements_on_screen": true,
+        "mobile_press_button": true,
+        "mobile_open_url": true,
+        "mobile_swipe_on_screen": true,
+        "mobile_type_keys": true,
+        "mobile_save_screenshot": true,
+        "mobile_take_screenshot": true,
+        "mobile_set_orientation": true,
+        "mobile_set_location": true,
+        "mobile_clipboard": true,
+        "mobile_get_device_logs": true,
+        "mobile_get_orientation": true,
+        "mobile_start_screen_recording": true,
+        "mobile_stop_screen_recording": true,
+        "mobile_list_crashes": true,
+        "mobile_get_crash": true,
+        "mobile_batch_commands": true
+      }
+    }
+  },
+  "custom": []
+}

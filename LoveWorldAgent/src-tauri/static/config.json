@@ -1,0 +1,45 @@
+{
+  "app": {
+    "log_level": "INFO",
+    "name": "LoveWorldAgent",
+    "project_path": "E:\\BiSaiCodeProjects\\test\\demo_project"
+  },
+  "chat": {
+    "ask": true,
+    "todo": true,
+    "notify": {
+      "banner": true,
+      "sound": true,
+      "volume": 100
+    }
+  },
+  "logging": {
+    "dir": "",
+    "max_lines": 30000
+  },
+  "server": {
+    "dev_server_url": "http://127.0.0.1:5173",
+    "host": "127.0.0.1",
+    "port": 8866
+  },
+  "ui": {
+    "layout": {
+      "remember": true,
+      "sideWidth": 200,
+      "rightWidth": 420,
+      "rightOpen": true,
+      "rightTab": ""
+    },
+    "theme": "dark"
+  },
+  "window": {
+    "background_color": "#181818",
+    "height": 1000,
+    "min_size": [
+      1080,
+      778
+    ],
+    "title": "爱满天下",
+    "width": 1600
+  }
+}

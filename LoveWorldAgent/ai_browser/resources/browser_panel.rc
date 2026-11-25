@@ -1,0 +1,4 @@
+// browser_panel 应用资源：窗口图标 dragon.ico（嵌入 exe，无需外部文件）。
+#include "resource.h"
+
+IDI_APPICON ICON "dragon.ico"

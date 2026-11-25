@@ -1,0 +1,19 @@
+[package]
+name = "mobile_use"
+version = "0.1.0"
+description = "Android 移动端自动化 sidecar（内置工具，28 个 mobile_* 工具，adb 命名管道）"
+authors = ["LoveWorldAgent"]
+edition = "2021"
+rust-version = "1.88"
+
+[[bin]]
+name = "mobile_use"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+base64 = "0.22"
+chrono = "0.4"
+clap = { version = "4", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"

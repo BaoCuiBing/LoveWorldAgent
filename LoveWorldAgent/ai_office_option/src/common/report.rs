@@ -1,0 +1,1 @@
+pub use crate::word::report::*; // 共享错误/成功信封（Word/PPT/Excel 统一）

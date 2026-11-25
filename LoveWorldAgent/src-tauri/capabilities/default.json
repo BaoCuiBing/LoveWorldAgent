@@ -1,0 +1,12 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "主窗口默认能力：核心窗口能力与对话框、通知、系统打开",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "dialog:default",
+    "notification:default",
+    "opener:default"
+  ]
+}

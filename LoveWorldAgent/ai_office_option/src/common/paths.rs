@@ -1,0 +1,1 @@
+pub use crate::word::paths::*; // 共享本地路径解析与基础安全校验

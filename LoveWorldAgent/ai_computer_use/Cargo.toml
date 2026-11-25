@@ -1,0 +1,46 @@
+[package]
+name = "computer_use"
+version = "0.1.0"
+description = "Windows 桌面自动化 sidecar（内置工具，23 个 computer_* 工具 + omni_parser 模块，命名管道/stdio）"
+authors = ["LoveWorldAgent"]
+edition = "2021"
+rust-version = "1.88"
+
+[[bin]]
+name = "computer_use"
+path = "src/main.rs"
+
+[workspace]
+resolver = "2"
+
+[dependencies]
+anyhow = "1"
+base64 = "0.22"
+chrono = "0.4"
+clap = { version = "4", features = ["derive"] }
+half = "2"
+image = { version = "0.25", default-features = false, features = ["png", "jpeg"] }
+ndarray = "0.16"
+ort = { version = "=2.0.0-rc.12", default-features = false, features = ["std", "ndarray", "half", "cuda", "load-dynamic", "api-24"] }
+serde = { version = "1", features = ["derive", "rc"] }
+serde_json = "1"
+tokenizers = { version = "0.23", default-features = false, features = ["onig"] }
+tokio = { version = "1", features = ["rt", "sync", "macros", "time"] }
+windows = { version = "0.62", features = [
+    "Win32_Foundation",
+    "Win32_Graphics_Dwm",
+    "Win32_Graphics_Gdi",
+    "Win32_System_Com",
+    "Win32_System_DataExchange",
+    "Win32_System_LibraryLoader",
+    "Win32_System_Memory",
+    "Win32_System_Ole",
+    "Win32_System_Registry",
+    "Win32_System_Threading",
+    "Win32_System_Variant",
+    "Win32_UI_Accessibility",
+    "Win32_UI_Controls",
+    "Win32_UI_HiDpi",
+    "Win32_UI_Input_KeyboardAndMouse",
+    "Win32_UI_WindowsAndMessaging",
+] }

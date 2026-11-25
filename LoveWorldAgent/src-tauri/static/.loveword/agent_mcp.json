@@ -1,0 +1,34 @@
+{
+  "servers": [
+    {
+      "name": "Chrome DevTools MCP",
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@latest"
+      ],
+      "env": {},
+      "url": "",
+      "headers": {},
+      "enabled": true,
+      "fromGalleryId": "byted-mcp.chrome-devtools-mcp"
+    },
+    {
+      "name": "GitHub",
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": ""
+      },
+      "url": "",
+      "headers": {},
+      "enabled": true,
+      "fromGalleryId": "modelcontextprotocol.servers_github"
+    }
+  ]
+}

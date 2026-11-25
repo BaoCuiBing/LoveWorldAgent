@@ -1,0 +1,121 @@
+@import 'tailwindcss';
+
+/* 暗色变体：沿用项目现有的 html.dark 开关（index.html 与 theme.js） */
+@custom-variant dark (&:is(.dark *));
+
+/* 把 shadcn 主题 token 映射成 Tailwind 颜色，便于使用 bg-background / text-muted-foreground 等工具类 */
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-destructive-foreground: var(--destructive-foreground);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+    --radius-sm: calc(var(--radius) - 2px);
+    --radius-md: var(--radius);
+    --radius-lg: calc(var(--radius) + 2px);
+    --radius-xl: calc(var(--radius) + 6px);
+}
+
+/* 浅色主题：保持中性灰阶与蓝色主色 */
+:root {
+    --background: #ffffff;
+    --foreground: #1f1f1f;
+    --card: #ffffff;
+    --card-foreground: #1f1f1f;
+    --popover: #ffffff;
+    --popover-foreground: #1f1f1f;
+    --primary: #409eff;
+    --primary-foreground: #ffffff;
+    --secondary: #f2f3f5;
+    --secondary-foreground: #303133;
+    --muted: #f5f7fa;
+    --muted-foreground: #909399;
+    --accent: #f2f3f5;
+    --accent-foreground: #303133;
+    --destructive: #f56c6c;
+    --destructive-foreground: #ffffff;
+    --border: #dcdfe6;
+    --input: #dcdfe6;
+    --ring: #409eff;
+    --radius: 6px;
+}
+
+/* 深色主题：贴合现有 #181818 / #1f1f1f / #252526 层级 */
+.dark {
+    --background: #181818;
+    --foreground: #f0f0f0;
+    --card: #1f1f1f;
+    --card-foreground: #f0f0f0;
+    --popover: #252526;
+    --popover-foreground: #f0f0f0;
+    --primary: #409eff;
+    --primary-foreground: #ffffff;
+    --secondary: #2a2a2a;
+    --secondary-foreground: #d0d0d0;
+    --muted: #242424;
+    --muted-foreground: #9d9d9d;
+    --accent: #2a2a2a;
+    --accent-foreground: #f0f0f0;
+    --destructive: #f56c6c;
+    --destructive-foreground: #ffffff;
+    --border: #333333;
+    --input: #3a3a3a;
+    --ring: #409eff;
+    --radius: 6px;
+}
+
+@layer base {
+    /* shadcn 组件依赖默认边框色 */
+    *, ::before, ::after, ::backdrop, ::file-selector-button { border-color: var(--color-border, currentColor); }
+}
+
+/* 轻量进出场动画，供弹层组件使用 */
+@keyframes lw-fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lw-fade-out { from { opacity: 1; } to { opacity: 0; } }
+@keyframes lw-zoom-in-95 { from { opacity: 0; transform: scale(.95); } to { opacity: 1; transform: scale(1); } }
+@keyframes lw-zoom-out-95 { from { opacity: 1; transform: scale(1); } to { opacity: 0; transform: scale(.95); } }
+@keyframes lw-slide-in-top { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes lw-slide-in-bottom { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes lw-slide-in-left { from { opacity: 0; transform: translateX(-6px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes lw-slide-in-right { from { opacity: 0; transform: translateX(6px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes lw-slide-in-right-full { from { transform: translateX(100%); } to { transform: translateX(0); } }
+@keyframes lw-slide-in-left-full { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+@keyframes lw-slide-in-top-full { from { transform: translateY(-100%); } to { transform: translateY(0); } }
+@keyframes lw-slide-in-bottom-full { from { transform: translateY(100%); } to { transform: translateY(0); } }
+@keyframes lw-slide-out-right-full { from { transform: translateX(0); } to { transform: translateX(100%); } }
+@keyframes lw-slide-out-left-full { from { transform: translateX(0); } to { transform: translateX(-100%); } }
+@keyframes lw-slide-out-top-full { from { transform: translateY(0); } to { transform: translateY(-100%); } }
+@keyframes lw-slide-out-bottom-full { from { transform: translateY(0); } to { transform: translateY(100%); } }
+
+@utility animate-in { animation-duration: 150ms; animation-fill-mode: both; animation-timing-function: cubic-bezier(.16, 1, .3, 1); }
+@utility animate-out { animation-duration: 120ms; animation-fill-mode: both; animation-timing-function: ease-in; }
+@utility fade-in-0 { animation-name: lw-fade-in; }
+@utility fade-out-0 { animation-name: lw-fade-out; }
+@utility zoom-in-95 { animation-name: lw-zoom-in-95; }
+@utility zoom-out-95 { animation-name: lw-zoom-out-95; }
+@utility slide-in-from-top-2 { animation-name: lw-slide-in-top; }
+@utility slide-in-from-bottom-2 { animation-name: lw-slide-in-bottom; }
+@utility slide-in-from-left-2 { animation-name: lw-slide-in-left; }
+@utility slide-in-from-right-2 { animation-name: lw-slide-in-right; }
+@utility slide-in-from-right { animation-name: lw-slide-in-right-full; animation-duration: 200ms; }
+@utility slide-in-from-left { animation-name: lw-slide-in-left-full; animation-duration: 200ms; }
+@utility slide-in-from-top { animation-name: lw-slide-in-top-full; animation-duration: 200ms; }
+@utility slide-in-from-bottom { animation-name: lw-slide-in-bottom-full; animation-duration: 200ms; }
+@utility slide-out-to-right { animation-name: lw-slide-out-right-full; animation-duration: 200ms; }
+@utility slide-out-to-left { animation-name: lw-slide-out-left-full; animation-duration: 200ms; }
+@utility slide-out-to-top { animation-name: lw-slide-out-top-full; animation-duration: 200ms; }
+@utility slide-out-to-bottom { animation-name: lw-slide-out-bottom-full; animation-duration: 200ms; }

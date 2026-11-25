@@ -1,0 +1,88 @@
+{
+  "agent": {
+    "command_timeout_seconds": 60,
+    "enabled": true,
+    "max_turns": 200,
+    "model": "deepseek-v4-flash",
+    "timeout_seconds": 180
+  },
+  "llm": [
+    {
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "api_key": "",
+      "model": "deepseek-v4-flash",
+      "enabled": true,
+      "context": "1M",
+      "thinking": "medium",
+      "display": "DeepSeek",
+      "vision": true
+    },
+    {
+      "provider": "kimi",
+      "base_url": "https://api.moonshot.cn/v1",
+      "api_key": "",
+      "model": "kimi-k2.6",
+      "enabled": true,
+      "context": "1M",
+      "thinking": "medium",
+      "display": "Kimi",
+      "vision": true
+    },
+    {
+      "provider": "glm",
+      "base_url": "https://open.bigmodel.cn/api/paas/v4",
+      "api_key": "",
+      "model": "glm-5.3-flash",
+      "enabled": true,
+      "context": "600k",
+      "thinking": "high",
+      "display": "GLM",
+      "vision": true
+    },
+    {
+      "provider": "huawei",
+      "base_url": "https://api.modelarts-maas.com/v2",
+      "api_key": "",
+      "model": "openpangu-2.1-pro",
+      "enabled": true,
+      "context": "600k",
+      "thinking": "enabled",
+      "display": "华为",
+      "vision": false
+    },
+    {
+      "provider": "huawei",
+      "base_url": "https://api.modelarts-maas.com/v2",
+      "api_key": "",
+      "model": "glm-5.3",
+      "enabled": true,
+      "context": "1M",
+      "thinking": "high",
+      "display": "华为",
+      "vision": false
+    },
+    {
+      "provider": "huawei",
+      "base_url": "https://api.modelarts-maas.com/v2",
+      "api_key": "",
+      "model": "glm-5.2",
+      "enabled": true,
+      "context": "1M",
+      "thinking": "high",
+      "display": "华为",
+      "vision": false
+    },
+    {
+      "provider": "huawei",
+      "base_url": "https://api.modelarts-maas.com/v2",
+      "api_key": "",
+      "model": "deepseek-v4.1-flash-1017",
+      "enabled": true,
+      "context": "1M",
+      "thinking": "high",
+      "display": "华为",
+      "vision": true
+    }
+  ]
+}
